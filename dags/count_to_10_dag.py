@@ -22,7 +22,7 @@ logger = logging.getLogger(__name__)
 @dag(
     dag_id="count_to_10",
     description="Counts to 10, one mapped task per number",
-    schedule=None,  # trigger manually
+    schedule='@hourly',  # trigger hourly
     start_date=datetime(2024, 1, 1),
     catchup=True,
     tags=["example", "k8s-executor"],
