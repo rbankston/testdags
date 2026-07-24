@@ -24,7 +24,7 @@ logger = logging.getLogger(__name__)
     description="Counts to 10, one mapped task per number",
     schedule=None,  # trigger manually
     start_date=datetime(2024, 1, 1),
-    catchup=False,
+    catchup=True,
     tags=["example", "k8s-executor"],
 )
 def count_to_10():
